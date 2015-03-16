@@ -46,13 +46,14 @@ def deviance_curve(classifier, features, labels, metaparameter_name, param_range
 # http://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html
 
 
-def plot_tree(clf, dot_file):
+def plot_tree(clf, dot_file, features_name):
     with open(dot_file, 'w') as fout:
-        export_graphviz(clf, out_file=fout)
+        export_graphviz(clf, out_file=fout, feature_names=features_name)
     d = graph_from_dot_file(dot_file)
     filepath = dot_file[:-4]
-    d.write_ps(filepath + '.jpg')
-    d.write_png(filepath + '.ps')
+    d.write_ps(filepath + '.ps')
+    d.write_png(filepath + '.png')
     d.write_pdf(filepath + '.pdf')
+    d.write_jpg(filepath + '.jpg')
 
 

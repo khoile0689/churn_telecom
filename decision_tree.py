@@ -26,4 +26,4 @@ param_range = np.arange(1, 21, 1)
 deviance_curve(clf, X_train, y_train, 'max_depth', param_range=param_range, metric='f1', n_folds=5, njobs=1)
 
 
-plot_tree(clf, 'tree_test.dot')
+plot_tree(clf, 'tree.dot', features_name=features.columns)
