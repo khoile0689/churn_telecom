@@ -26,7 +26,7 @@ def deviance_curve(classifier, features, labels, metaparameter_name, param_range
     validation_scores_std = np.std(validation_scores, axis=1)
     sns.set_style("darkgrid")
     sns.set_context("notebook", font_scale=1.5, rc={"lines.linewidth": 2.5})
-    plt.figure(num=None, figsize=fig_size, dpi=600, facecolor='w', edgecolor='k')
+    plt.figure(num=None, figsize=fig_size, dpi=300, facecolor='w', edgecolor='k')
     plt.title("Validation Curve")
     plt.xlabel(metaparameter_name)
     plt.ylabel(metric)

@@ -10,7 +10,7 @@ from sklearn.metrics import classification_report
 from sklearn.learning_curve import validation_curve
 from sklearn.preprocessing import StandardScaler
 from evaluation import deviance_curve
-FIG_SIZE = (16,10)
+FIG_SIZE = (16, 10)
 
 df = pd.read_csv('data/churn_cleaned.csv')
 labels = df['churn']
